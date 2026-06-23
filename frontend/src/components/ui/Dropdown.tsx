@@ -15,21 +15,14 @@ const Dropdown = ({ options, value, onChange }: DropdownProps) => {
   const [open, setOpen] = useState(false)
 
   const selectedLabel =
-      options.find((opt) => opt.value === value)?.label || "Selecione"
+      options.find((opt) => opt.value === value)?.label || "Categorias"
 
    return (
     <div style={{ position: "relative", width: 200 }}>
       
       <button
         onClick={() => setOpen(!open)}
-        style={{
-          width: "100%",
-          padding: 10,
-          border: "1px solid #ccc",
-          borderRadius: 6,
-          background: "white",
-          cursor: "pointer",
-        }}
+        className="w-full p-2 border border-gray-300 rounded-md bg-white hover:bg-gray-100"
       >
         {selectedLabel}
       </button>

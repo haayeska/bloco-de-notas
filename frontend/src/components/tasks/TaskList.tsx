@@ -1,45 +1,26 @@
-import { useState} from "react"
 
-import Dropdown from "../ui/Dropdown"
-import Input from "../ui/Input"
-import Button from "../ui/Button"
 
-const Form = () => {
-  const [categoria, setCategoria] = useState("")
-  const [descricao, setDescricao] = useState("")
+const TaskList = () => {
+  
 
   
   return (
    
-   <div style={{
-    display: "flex",
-    flexDirection: "column",
-    gap: 10
-   }} >
-      <Dropdown
-        value={categoria}
-        onChange={setCategoria}
-        options={[
-          { label: "Trabalho", value: "work" },
-          { label: "Estudo", value: "study" },
-          { label: "Pessoal", value: "personal" },
-        ]}
-      />
+   <div className="flex flex-col gap-2 *:p-2 *:border *:border-gray-300 *:rounded-md *:bg-white *:hover:bg-gray-100">
+     <ul>
+        <li className="p-2 border border-gray-300 rounded-md bg-white hover:bg-gray-100">
+          Tarefa 1
+        </li>
+        <li className="p-2 border border-gray-300 rounded-md bg-white hover:bg-gray-100">
+          Tarefa 2
+        </li>
+     </ul>
 
-      <Input 
-        value={descricao}
-        onChange={setDescricao}
-        placeholder="Descrição"
-      />
-      
-      <Button onClick={() => console.log("Botão clicado!")}>
-        Adicionar
-      </Button>
-    </div>
+  </div>
     
   )
 
 }
 
-export default Form
+export default TaskList
 

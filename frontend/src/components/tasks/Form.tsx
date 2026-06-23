@@ -11,11 +11,7 @@ const Form = () => {
   
   return (
    
-   <div style={{
-    display: "flex",
-    flexDirection: "column",
-    gap: 10
-   }} >
+   <div className="flex gap-2">
       <Dropdown
         value={categoria}
         onChange={setCategoria}
